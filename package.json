@@ -1,10 +1,21 @@
 {
   "devDependencies": {
-    "jest": "^29.6.1"
+    "jest": "^29.6.1",
+    "supertest": "^6.3.3"
   },
   "dependencies": {
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "openai": "^3.3.0"
-  }
+  },
+  "name": "aivoicechatbackend",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
