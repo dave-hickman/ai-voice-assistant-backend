@@ -1,4 +1,3 @@
-const getAssistant =  require("../utils")
 const {Configuration, OpenAIApi} = require("openai")
 require('dotenv').config()
 
