@@ -10,7 +10,7 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 const response = await openai.createChatCompletion(requestInfo)
-console.log(response.data.choices[0].message)
+return response.data.choices[0].message
 }
 
 module.exports = sendRequest
