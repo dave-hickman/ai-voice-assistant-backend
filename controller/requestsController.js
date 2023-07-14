@@ -6,6 +6,7 @@ const makeRequest = (req, res, next) => {
     .then((response) => {
         res.status(201).send({response})
     })
+    .catch(next)
 }
 
 module.exports = makeRequest
