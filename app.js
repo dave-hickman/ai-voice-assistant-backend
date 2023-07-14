@@ -19,7 +19,7 @@ app.use((err, req, res, next) => {
         res.status(err.status).send({err: err.msg})
     }
     else {
-        res.stats(500).send({msg: "Server Error"})
+        res.status(500).send({msg: "Server Error"})
     }
 })
 
