@@ -11,7 +11,7 @@
   },
   "name": "aivoicechatbackend",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "listen.js",
   "scripts": {
     "test": "jest"
   },
