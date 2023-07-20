@@ -1,6 +1,6 @@
 const express = require('express')
 const cors = require('cors')
-const makeRequest = require('./controller/requestsController')
+const {makeRequest , makeSpeechRequest} = require('./controller/requestsController')
 
 const app = express()
 
@@ -9,6 +9,8 @@ app.use(cors())
 app.use(express.json())
 
 app.post('/api/content/', makeRequest)
+
+app.post('/api/speech/', makeSpeechRequest)
 
 app.get('/api/', (req,res) => {
     res.send('Hey there')

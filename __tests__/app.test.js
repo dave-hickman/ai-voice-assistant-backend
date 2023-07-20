@@ -35,3 +35,20 @@ describe("POST /api/content/", () => {
     })
   });
 });
+
+describe.only('POST /api/speech/', () => {
+  it('should return an object with requested properties', () => {
+    const newRequest = {
+      input: {text: "hello, world"},
+      voice: {languageCode: 'en-US', ssmlGender: 'NEUTRAL'},
+      audioConfig: {audioEncoding: 'MP3'}
+    }
+    return request(app)
+    .post("/api/speech/")
+    .send(newRequest)
+    .expect(201)
+    .then((response) => {
+      expect(typeof response.res.text).toBe('string')
+    })
+  });
+});

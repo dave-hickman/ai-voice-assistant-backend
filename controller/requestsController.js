@@ -1,4 +1,4 @@
-const sendRequest = require("../model/requestsModel")
+const {sendRequest, sendSpeech} = require("../model/requestsModel")
 
 const makeRequest = (req, res, next) => {
     const requestInfo = req.body
@@ -9,4 +9,13 @@ const makeRequest = (req, res, next) => {
     .catch(next)
 }
 
-module.exports = makeRequest
+const makeSpeechRequest = (req, res, next) => {
+    const speechInfo = req.body
+    sendSpeech(speechInfo)
+    .then((response) =>{
+        res.status(201).send({response})
+    })
+    .catch(next)
+}
+
+module.exports = {makeRequest, makeSpeechRequest}
