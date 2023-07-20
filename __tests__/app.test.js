@@ -36,7 +36,7 @@ describe("POST /api/content/", () => {
   });
 });
 
-describe.only('POST /api/speech/', () => {
+describe('POST /api/speech/', () => {
   it('should return an object with requested properties', () => {
     const newRequest = {
       input: {text: "hello, world"},

@@ -13,7 +13,7 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 const response = await openai.createChatCompletion(requestInfo)
-return response.audioContent
+return response.data.choices[0].message
 }
 
 async function sendSpeech(request){
